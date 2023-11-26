@@ -1,9 +1,3 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 @import url('./reset.css');
 
 :root {
@@ -20,4 +14,105 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(83, 38, 218);
+}
+
+.search-form {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgb(83, 38, 218);
+}
+
+@media screen and (min-width: 600px) {
+  .search-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .search-form {
+    width: 50%;
+  }
+}
+
+.search-form input {
+  background-color: rgb(242, 240, 237);
+  width: 60%;
+  height: 36px;
+  margin: 0 auto;
+  border: none; /* <-- This thing here */
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+.btn-search {
+  margin-left: -60px;
+  font-size: 20px;
+}
+
+.gallery {
+  padding: 20px 10px 20px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.info-item b {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.icon {
+  display: inline-block;
+  fill: black;
 }

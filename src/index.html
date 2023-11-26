@@ -7,7 +7,24 @@
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+  <header class="header">
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button class="btn-search" type="submit">&#128269;</button>
+    </form>
+  </header>
   <body>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+    <div class="js-guard"></div>
+
+    <button type="button" class="load-more" hidden>Load more</button>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

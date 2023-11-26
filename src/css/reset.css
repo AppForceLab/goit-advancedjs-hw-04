@@ -1,35 +1,79 @@
-/* Reset styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
+@charset "utf-8";
+
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
 }
 
-p:last-child {
-  margin-bottom: 0;
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+a,
+button {
+  cursor: revert;
+}
+
+ol,
+ul,
+menu {
   list-style: none;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
+/* For images to not be able to exceed their container */
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+  content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable='true']) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
 }
