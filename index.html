@@ -7,9 +7,28 @@
     <title>Vanilla App Template</title>
     
     <script type="module" crossorigin src="/goit-advancedjs-hw-04.git/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-advancedjs-hw-04.git/assets/index-c9db6b34.css">
+    <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04.git/assets/vendor-a57f9cde.js">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-04.git/assets/vendor-eb6030bc.css">
+    <link rel="stylesheet" href="/goit-advancedjs-hw-04.git/assets/index-4b600edd.css">
   </head>
+  <header class="header">
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button class="btn-search" type="submit">&#128269;</button>
+    </form>
+  </header>
   <body>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+    <div class="js-guard"></div>
+
+    <button type="button" class="load-more" hidden>Load more</button>
     
   </body>
 </html>
