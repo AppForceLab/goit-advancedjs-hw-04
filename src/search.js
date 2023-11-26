@@ -35,6 +35,5 @@ async function fetchUrl(query, searchTemplate = { key: API_KEY }) {
 export function findImages(searchQuery, per_page = 20, page = 1) {
   PARAMS.per_page = per_page;
   PARAMS.page = page;
-
   return fetchUrl(searchQuery, PARAMS);
 }
